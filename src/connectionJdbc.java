@@ -19,8 +19,8 @@ public class connectionJdbc {
                 + "esalary DOUBLE"
                 + ")";
 
-//        PreparedStatement cretedTable =   connection.prepareStatement(createTableQuery);
-//        cretedTable.execute();
+        PreparedStatement cretedTable =   connection.prepareStatement(createTableQuery);
+        cretedTable.execute();
 
 
         // SQL query to insert data into the 'employee' table
@@ -31,8 +31,8 @@ public class connectionJdbc {
                 "(104, 'John', 40, 80000), " +
                 "(105, 'Shameer', 25, 90000);";
 
-//        PreparedStatement insetedData =   connection.prepareStatement(insetQuery);
-//        insetedData.execute();
+        PreparedStatement insetedData =   connection.prepareStatement(insetQuery);
+        insetedData.execute();
 
 
         // SQL query to select all data from the 'employee' table
@@ -43,6 +43,7 @@ public class connectionJdbc {
 
         ResultSet resultSet = selectSQLData.executeQuery();
 
+        // print table data
         while (resultSet.next()) {
             int empCode = resultSet.getInt("empcode");
             String empName = resultSet.getString("empname");
