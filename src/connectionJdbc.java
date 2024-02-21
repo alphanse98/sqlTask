@@ -37,7 +37,6 @@ public class connectionJdbc {
 
         // SQL query to select all data from the 'employee' table
         String selectSQL  = "select * from employee;";
-
         PreparedStatement selectSQLData =   connection.prepareStatement(selectSQL);
         selectSQLData.execute();
 
@@ -52,9 +51,6 @@ public class connectionJdbc {
 
             System.out.println(empCode + "\t" + empName + "\t" + empAge + "\t" + empSalary);
         }
-
-
-
     }
 }
 
